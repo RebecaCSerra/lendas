@@ -363,8 +363,14 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3032250562669994345, guid: 5cb2b00cb497f704aa271da67b940745, type: 3}
+      propertyPath: m_text
+      value: '10
+
+'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3032250562669994345, guid: 5cb2b00cb497f704aa271da67b940745, type: 3}
       propertyPath: m_fontSize
-      value: 70
+      value: 93
       objectReference: {fileID: 0}
     - target: {fileID: 3032250562669994345, guid: 5cb2b00cb497f704aa271da67b940745, type: 3}
       propertyPath: m_fontStyle
@@ -388,7 +394,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3032250562669994345, guid: 5cb2b00cb497f704aa271da67b940745, type: 3}
       propertyPath: m_fontSizeBase
-      value: 70
+      value: 93
       objectReference: {fileID: 0}
     - target: {fileID: 3032250562669994345, guid: 5cb2b00cb497f704aa271da67b940745, type: 3}
       propertyPath: m_textAlignment
@@ -407,8 +413,12 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3032250562669994347, guid: 5cb2b00cb497f704aa271da67b940745, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: -643.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3032250562669994347, guid: 5cb2b00cb497f704aa271da67b940745, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -232.5
+      value: -229.5
       objectReference: {fileID: 0}
     - target: {fileID: 3032250562669994347, guid: 5cb2b00cb497f704aa271da67b940745, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -751,7 +761,7 @@ MonoBehaviour:
   TilePrefab: {fileID: 8240428727968202350, guid: cd00236fc984e314393e8b2b43fd2ad5, type: 3}
   GridDimension: 6
   Distance: 0.7
-  StartingMoves: 40
+  StartingMoves: 10
 --- !u!4 &2029850387
 Transform:
   m_ObjectHideFlags: 0

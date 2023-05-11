@@ -11,7 +11,7 @@ public class GerenciaGrid : MonoBehaviour
     public float Distance = 1.0f;
     private GameObject[,] Grid;
 
-    public int StartingMoves = 30;
+    public int StartingMoves = 10;
     private int _numMoves;
     public int NumMoves
     {
@@ -32,7 +32,7 @@ public class GerenciaGrid : MonoBehaviour
 
     {
         Instance = this;
-       //NumMoves = StartingMoves;
+       NumMoves = StartingMoves;
     }
 
     // Start is called before the first frame update
