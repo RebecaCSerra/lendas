@@ -32,7 +32,7 @@ public class GerenciaGrid : MonoBehaviour
 
     {
         Instance = this;
-        //  NumMoves = StartingMoves;
+       //NumMoves = StartingMoves;
     }
 
     // Start is called before the first frame update
