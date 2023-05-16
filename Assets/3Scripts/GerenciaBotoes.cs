@@ -1,11 +1,10 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class GerenciaBotoes : MonoBehaviour
 {
-    public void Creditos() {
+    public void Creditos()
+    { 
         SceneManager.LoadScene(1);
     }
     public void Voltar()

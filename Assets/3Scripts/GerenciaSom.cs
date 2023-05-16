@@ -1,28 +1,41 @@
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
-public enum SoundType
-{
-    TypeSelect,
-    TypeMove,
-    TypePop,
-    TypeGameOver
-};
+using UnityEngine.UI;
 
 public class GerenciaSom : MonoBehaviour
 {
-    public List<AudioClip> clips;
-    public static GerenciaSom Instance;
-    AudioSource Source;
+    private Sprite volume;
+    public Sprite mudo;
+    public Button button;
+    private bool isOn = true;
 
-    private void Awake()
+    public AudioSource audioSource;
+    void Start()
     {
-        Instance = this;
-        Source = GetComponent<AudioSource>();
+        volume = button.image.sprite;
     }
 
-    public void PlaySound(SoundType clipType)
+    // Update is called once per frame
+    void Update()
     {
-        Source.PlayOneShot(clips[(int)clipType]);
+
     }
+
+    public void ButtonClicked()
+    {
+        if (isOn)
+        {
+            button.image.sprite = mudo;
+            isOn = false;
+            audioSource.mute = true;
+        }
+        else
+        {
+            button.image.sprite = volume;
+            isOn = true;
+            audioSource.mute = false;
+        }
+    }
+
 }
