@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class BackgroundMsc1 : MonoBehaviour
 {
@@ -17,6 +18,14 @@ public class BackgroundMsc1 : MonoBehaviour
         {
             Destroy(gameObject);
         }
+    }
+    void Update()
+    {
+        if (SceneManager.GetActiveScene().name == "fase")
+        {
+            GetComponent<AudioSource>().Pause();
+        }
+
     }
 }
 

@@ -10,7 +10,7 @@ public class ChangeSound : MonoBehaviour
     public Button button;
     private bool isOn = true;
 
-    public AudioSource audioSource;
+  //  public AudioSource fasecandycrush;
     void Start()
     {
         soundOnImg = button.image.sprite;
@@ -28,13 +28,13 @@ public class ChangeSound : MonoBehaviour
         {
             button.image.sprite = soundOffImg;
             isOn = false;
-            audioSource.mute = true;
+         //   fasecandycrush.mute = true;
         }
         else
         {
             button.image.sprite = soundOnImg;
             isOn = true;
-            audioSource.mute = false;
+        //    fasecandycrush.mute = false;
         }
     }
 }
