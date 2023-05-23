@@ -3,39 +3,38 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class GerenciaSom : MonoBehaviour
+public class ChangeSound : MonoBehaviour
 {
-    private Sprite volume;
-    public Sprite mudo;
+    private Sprite soundOnImg;
+    public Sprite soundOffImg;
     public Button button;
     private bool isOn = true;
 
     public AudioSource audioSource;
     void Start()
     {
-        volume = button.image.sprite;
+        soundOnImg = button.image.sprite;
     }
 
     // Update is called once per frame
     void Update()
     {
-
+        
     }
 
     public void ButtonClicked()
     {
         if (isOn)
         {
-            button.image.sprite = mudo;
+            button.image.sprite = soundOffImg;
             isOn = false;
             audioSource.mute = true;
         }
         else
         {
-            button.image.sprite = volume;
+            button.image.sprite = soundOnImg;
             isOn = true;
             audioSource.mute = false;
         }
     }
-
 }
