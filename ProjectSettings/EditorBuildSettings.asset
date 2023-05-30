@@ -18,8 +18,8 @@ EditorBuildSettings:
     path: Assets/1Scenes/fase.unity
     guid: 78033b21c4c5a464890a9670eeb85b48
   - enabled: 0
-    path: Assets/1Scenes/3.1Fase.unity
-    guid: 1003b16855727e24fb253b40485c3f3e
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 1
     path: Assets/1Scenes/n usadas/4fasebloqueada.unity
     guid: 95e0f79c3f4844345907138bb82d9161
@@ -29,6 +29,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/1Scenes/n usadas/6sair.unity
     guid: 66897761abde9d9408fb1a7999ea049f
+  - enabled: 1
+    path: Assets/1Scenes/n usadas/3lore.unity
+    guid: 3d9962420f591ba42905342020169996
   - enabled: 0
     path: Assets/1Scenes/n usadas/7vitoria.unity
     guid: a47953d43e35b9644850c1935202c908

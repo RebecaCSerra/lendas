@@ -83,4 +83,9 @@ public class GerenciaBotoes : MonoBehaviour
     {
         SceneManager.LoadScene(5);
     }
+
+    public void pergaminho()
+    {
+        SceneManager.LoadScene(7);
+    }
 }
