@@ -10,6 +10,8 @@ public class GerenciaGrid : MonoBehaviour
     public int GridDimension = 8;
     public float Distance = 1.0f;
     private GameObject[,] Grid;
+    public TextMeshProUGUI MovesText;
+
 
     public int StartingMoves = 10;
     private int _numMoves;
@@ -23,15 +25,14 @@ public class GerenciaGrid : MonoBehaviour
       set
       {
          _numMoves = value;
+        }
       }
-      }
-   
     public static GerenciaGrid Instance { get; private set; }
 
     void Awake()
 
     {
-        Instance = this;
+       Instance = this;
        NumMoves = StartingMoves;
     }
 
@@ -166,7 +167,7 @@ public class GerenciaGrid : MonoBehaviour
                 renderer.sprite = null;
             }
             return matchedTiles.Count > 0;
-        }
+    }
 
         List<SpriteRenderer> FindColumnMatchForTile(int col, int row, Sprite sprite)
         {
