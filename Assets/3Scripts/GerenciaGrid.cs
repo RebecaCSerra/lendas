@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GerenciaGrid : MonoBehaviour
 {
@@ -37,6 +38,14 @@ public class GerenciaGrid : MonoBehaviour
     }
 
     // Start is called before the first frame update
+    void Update()
+    {
+        if(NumMoves >0)
+        MovesText.text = NumMoves.ToString();
+        else
+            SceneManager.LoadScene(1);
+
+    }
     void Start()
     {
         Grid = new GameObject[GridDimension, GridDimension];
