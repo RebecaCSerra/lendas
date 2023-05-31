@@ -59,9 +59,13 @@ public class GerenciaBotoes : MonoBehaviour
     {
         SceneManager.LoadScene(5);
     }
-    public void x()
+    public void X()
     {
         SceneManager.LoadScene(3);
+    }
+    public void back2fases()
+    {
+        SceneManager.LoadScene(2);
     }
     public void telainicial()
     {

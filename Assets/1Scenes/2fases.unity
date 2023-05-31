@@ -1058,6 +1058,7 @@ GameObject:
   - component: {fileID: 1177478818}
   - component: {fileID: 1177478817}
   - component: {fileID: 1177478816}
+  - component: {fileID: 1177478819}
   m_Layer: 5
   m_Name: pergaminho
   m_TagString: Untagged
@@ -1128,7 +1129,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1177478817}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1177478819}
+        m_TargetAssemblyTypeName: GerenciaBotoes, Assembly-CSharp
+        m_MethodName: pergaminho
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1177478817
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1167,6 +1180,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1177478814}
   m_CullTransparentMesh: 1
+--- !u!114 &1177478819
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1177478814}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f6ce3263f080e84a9284de1f5bfe08d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1257796161
 GameObject:
   m_ObjectHideFlags: 0
