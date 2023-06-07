@@ -573,9 +573,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3032250562669994345, guid: 5cb2b00cb497f704aa271da67b940745, type: 3}
       propertyPath: m_text
-      value: '10
-
-'
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 3032250562669994345, guid: 5cb2b00cb497f704aa271da67b940745, type: 3}
       propertyPath: m_fontSize

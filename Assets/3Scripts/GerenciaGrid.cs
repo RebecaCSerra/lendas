@@ -4,6 +4,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+
 public class GerenciaGrid : MonoBehaviour
 {
     public List<Sprite> Sprites = new List<Sprite>();
@@ -43,7 +44,7 @@ public class GerenciaGrid : MonoBehaviour
         if(NumMoves >0)
         MovesText.text = NumMoves.ToString();
         else
-            SceneManager.LoadScene(1);
+            SceneManager.LoadScene(8);
 
     }
     void Start()
@@ -173,7 +174,8 @@ public class GerenciaGrid : MonoBehaviour
 
             foreach (SpriteRenderer renderer in matchedTiles)
             {
-                renderer.sprite = null;
+            //renderer.color = Color.red;
+            renderer.sprite = null;
             }
             return matchedTiles.Count > 0;
     }
@@ -208,7 +210,7 @@ public class GerenciaGrid : MonoBehaviour
             return result;
         }
 
-        void FillHoles()
+        void FillHoles1()
         {
             for (int column = 0; column < GridDimension; column++)
                 for (int row = 0; row < GridDimension; row++)
@@ -219,7 +221,7 @@ public class GerenciaGrid : MonoBehaviour
                         SpriteRenderer next = current;
                         for (int filler = row; filler < GridDimension - 1; filler++)
                         {
-                            next = GetSpriteRendererAt(column, filler + 1);
+                            next = GetSpriteRendererAt(column, filler);
                             current.sprite = next.sprite;
                             current = next;
                         }
@@ -227,4 +229,18 @@ public class GerenciaGrid : MonoBehaviour
                     }
                 }
         }
+    void FillHoles()
+    {
+        for (int column = 0; column < GridDimension; column++)
+            for (int row = 0; row < GridDimension; row++)
+            {
+                if (GetSpriteRendererAt(column, row).sprite == null)
+                {
+                    SpriteRenderer current = GetSpriteRendererAt(column, row);
+
+
+                    current.sprite = Sprites[Random.Range(0, Sprites.Count)];
+                }
+            }
     }
+}
