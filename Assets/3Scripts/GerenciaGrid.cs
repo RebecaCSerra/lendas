@@ -13,8 +13,9 @@ public class GerenciaGrid : MonoBehaviour
     public float Distance = 1.0f;
     private GameObject[,] Grid;
     public TextMeshProUGUI MovesText;
+    public TextMeshProUGUI LevelGoal1Text;
 
-
+    
     public int StartingMoves = 10;
     private int _numMoves;
     public int NumMoves
@@ -29,6 +30,20 @@ public class GerenciaGrid : MonoBehaviour
          _numMoves = value;
         }
       }
+    public int LevelGoal1 = 5;
+    private int _numTiles;
+    public int NumTiles
+    {
+        get
+        {
+            return _numTiles;
+        }
+
+        set
+        {
+            _numTiles = value;
+        }
+    }
     public static GerenciaGrid Instance { get; private set; }
 
     void Awake()
@@ -208,26 +223,6 @@ public class GerenciaGrid : MonoBehaviour
                 result.Add(nextRow);
             }
             return result;
-        }
-
-        void FillHoles1()
-        {
-            for (int column = 0; column < GridDimension; column++)
-                for (int row = 0; row < GridDimension; row++)
-                {
-                    while (GetSpriteRendererAt(column, row).sprite == null)
-                    {
-                        SpriteRenderer current = GetSpriteRendererAt(column, row);
-                        SpriteRenderer next = current;
-                        for (int filler = row; filler < GridDimension - 1; filler++)
-                        {
-                            next = GetSpriteRendererAt(column, filler);
-                            current.sprite = next.sprite;
-                            current = next;
-                        }
-                        next.sprite = Sprites[Random.Range(0, Sprites.Count)];
-                    }
-                }
         }
     void FillHoles()
     {
