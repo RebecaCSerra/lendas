@@ -71,12 +71,12 @@ public class GerenciaGrid : MonoBehaviour
     void InitGrid()
     {
         Vector3 positionOffset = transform.position - new Vector3(GridDimension * Distance / 2.0f, GridDimension * Distance / 2.0f, 0);
-
-        for (int row = 0; row < GridDimension; row++)
+       
+            for (int row = 0; row < GridDimension; row++)
             for (int column = 0; column < GridDimension; column++)
             {
                 GameObject newTile = Instantiate(TilePrefab);
-
+              
                 List<Sprite> possibleSprites = new List<Sprite>(Sprites);
 
                 //Choose what sprite to use for this cell
@@ -102,7 +102,8 @@ public class GerenciaGrid : MonoBehaviour
 
                 newTile.transform.parent = transform;
                 newTile.transform.position = new Vector3(column * Distance, row * Distance, 0) + positionOffset;
-
+                newTile.name = renderer.sprite.name;
+                print(newTile.name);
                 Grid[column, row] = newTile;
             }
     }
@@ -190,8 +191,15 @@ public class GerenciaGrid : MonoBehaviour
             foreach (SpriteRenderer renderer in matchedTiles)
             {
             //renderer.color = Color.red;
+            print(renderer.name);
             renderer.sprite = null;
-            }
+            
+        }
+            bool hasmatch =  matchedTiles.Count > 0;
+            int CountGoal1 = int.Parse(LevelGoal1Text.text) - matchedTiles.Count;
+            if (CountGoal1 >= 0 )
+            LevelGoal1Text.text = CountGoal1.ToString();
+
             return matchedTiles.Count > 0;
     }
 
