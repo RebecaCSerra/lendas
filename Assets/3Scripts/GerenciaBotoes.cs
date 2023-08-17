@@ -96,4 +96,52 @@ public class GerenciaBotoes : MonoBehaviour
     {
         SceneManager.LoadScene(10);
     }
+    public void casavermelha()
+    {
+        SceneManager.LoadScene(0);
+    }
+    public void Yarablock1()
+    {
+        SceneManager.LoadScene(11);
+    }
+    public void Yarablock2()
+    {
+        SceneManager.LoadScene(11);
+    }
+    public void Yarablock3()
+    {
+        SceneManager.LoadScene(11);
+    }
+    public void Yarablock4()
+    {
+        SceneManager.LoadScene(11);
+    }
+    public void Yarablock5()
+    {
+        SceneManager.LoadScene(11);
+    }
+    public void Yarablock6()
+    {
+        SceneManager.LoadScene(11);
+    }
+    public void Yarablock7()
+    {
+        SceneManager.LoadScene(11);
+    }
+    public void setavermelha()
+    {
+        SceneManager.LoadScene(2);
+    }
+    public void loreYara()
+    {
+        SceneManager.LoadScene(12);
+    }
+    public void redX()
+    {
+        SceneManager.LoadScene(10);
+    }
+    public void redX2()
+    {
+        SceneManager.LoadScene(10);
+    }
 }
