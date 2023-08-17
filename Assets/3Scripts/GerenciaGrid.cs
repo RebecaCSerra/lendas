@@ -14,8 +14,9 @@ public class GerenciaGrid : MonoBehaviour
     private GameObject[,] Grid;
     public TextMeshProUGUI MovesText;
     public TextMeshProUGUI LevelGoal1Text;
+    public TextMeshProUGUI LevelGoal2Text;
 
-    
+
     public int StartingMoves = 10;
     private int _numMoves;
     public int NumMoves
@@ -31,6 +32,7 @@ public class GerenciaGrid : MonoBehaviour
         }
       }
     public int LevelGoal1 = 5;
+    public int LevelGoal2 = 5;
     private int _numTiles;
     public int NumTiles
     {
@@ -199,8 +201,16 @@ public class GerenciaGrid : MonoBehaviour
             int CountGoal1 = int.Parse(LevelGoal1Text.text) - matchedTiles.Count;
             if (CountGoal1 >= 0 )
             LevelGoal1Text.text = CountGoal1.ToString();
-
+            int CountGoal2 = int.Parse(LevelGoal2Text.text) - matchedTiles.Count;
+            if (CountGoal2 >= 0)
+            LevelGoal2Text.text = CountGoal2.ToString();
             return matchedTiles.Count > 0;
+
+        //bool hasmatch2 = matchedTiles.Count > 0;
+        //int CountGoal2 = int.Parse(LevelGoal2Text.text) - matchedTiles.Count;
+        //if (CountGoal2 >= 0)
+        //    LevelGoal2Text.text = CountGoal2.ToString();
+        //return matchedTiles.Count > 0;
     }
 
         List<SpriteRenderer> FindColumnMatchForTile(int col, int row, Sprite sprite)
