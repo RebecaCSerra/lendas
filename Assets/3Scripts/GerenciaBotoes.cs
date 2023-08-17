@@ -92,4 +92,8 @@ public class GerenciaBotoes : MonoBehaviour
     {
         SceneManager.LoadScene(7);
     }
+    public void setaverde()
+    {
+        SceneManager.LoadScene(10);
+    }
 }

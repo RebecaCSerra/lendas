@@ -161,7 +161,8 @@ public class GerenciaGrid : MonoBehaviour
             } while (CheckMatches());
              if (NumMoves <= 0)
             {
-                   NumMoves = 0;            }
+                   NumMoves = 0;            
+            }
             }
         }
 
@@ -193,24 +194,27 @@ public class GerenciaGrid : MonoBehaviour
             foreach (SpriteRenderer renderer in matchedTiles)
             {
             //renderer.color = Color.red;
-            print(renderer.name);
+            print(renderer.name + "em match");
             renderer.sprite = null;
-            
-        }
-            bool hasmatch =  matchedTiles.Count > 0;
-            int CountGoal1 = int.Parse(LevelGoal1Text.text) - matchedTiles.Count;
-            if (CountGoal1 >= 0 )
-            LevelGoal1Text.text = CountGoal1.ToString();
-            int CountGoal2 = int.Parse(LevelGoal2Text.text) - matchedTiles.Count;
-            if (CountGoal2 >= 0)
-            LevelGoal2Text.text = CountGoal2.ToString();
-            return matchedTiles.Count > 0;
 
-        //bool hasmatch2 = matchedTiles.Count > 0;
-        //int CountGoal2 = int.Parse(LevelGoal2Text.text) - matchedTiles.Count;
-        //if (CountGoal2 >= 0)
-        //    LevelGoal2Text.text = CountGoal2.ToString();
-        //return matchedTiles.Count > 0;
+            bool hasmatch = matchedTiles.Count > 0;
+            int CountGoal2 = 0;
+            int CountGoal1 = int.Parse(LevelGoal1Text.text) - matchedTiles.Count;
+            if (CountGoal1 >= 0)
+                LevelGoal1Text.text = CountGoal1.ToString();
+            if (renderer.name == "cobra-removebg-preview")
+            {
+                CountGoal2 = int.Parse(LevelGoal2Text.text) - matchedTiles.Count;
+                print(matchedTiles.Count);
+            }
+               
+            if (CountGoal2 >= 0)
+                LevelGoal2Text.text = CountGoal2.ToString();
+            
+
+        }
+
+        return matchedTiles.Count > 0;
     }
 
         List<SpriteRenderer> FindColumnMatchForTile(int col, int row, Sprite sprite)
