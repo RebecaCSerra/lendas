@@ -237,7 +237,7 @@ public class GerenciaGrid : MonoBehaviour
             List<SpriteRenderer> result = new List<SpriteRenderer>();
             for (int i = row + 1; i < GridDimension; i++)
             {
-                SpriteRenderer nextRow = GetSpriteRendererAt(col, i);
+            SpriteRenderer nextRow = GetSpriteRendererAt(col, i);
                 if (nextRow.sprite != sprite)
                 {
                     break;
