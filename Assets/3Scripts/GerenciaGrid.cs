@@ -19,6 +19,7 @@ public class GerenciaGrid : MonoBehaviour
 
     public int StartingMoves = 10;
     private int _numMoves;
+    private int CountMoves;
     public int NumMoves
     {
       get
@@ -105,7 +106,7 @@ public class GerenciaGrid : MonoBehaviour
                 newTile.transform.parent = transform;
                 newTile.transform.position = new Vector3(column * Distance, row * Distance, 0) + positionOffset;
                 newTile.name = renderer.sprite.name;
-                print(newTile.name);
+                
                 Grid[column, row] = newTile;
             }
     }
@@ -142,19 +143,25 @@ public class GerenciaGrid : MonoBehaviour
         renderer1.sprite = renderer2.sprite;
         renderer2.sprite = temp;
 
-        bool changesOccurs = CheckMatches();
+        bool changesOccurs = CheckandCountMatches();
         if (!changesOccurs)
         {
             temp = renderer1.sprite;
             renderer1.sprite = renderer2.sprite;
             renderer2.sprite = temp;
             //GerenciaSom.Instance.PlaySound(SoundType.TypeMove);
-            print(changesOccurs);
+           
         }
         else
         {
             //GerenciaSom.Instance.PlaySound(SoundType.TypePop);
-              NumMoves--;
+            //teve mudança
+            print("Count" + CountMoves);
+            int CountGoal1 = int.Parse(LevelGoal1Text.text) -CountMoves;
+            if (CountGoal1 >= 0)
+                LevelGoal1Text.text = CountGoal1.ToString();
+           
+            NumMoves--;
             do
             {
                 FillHoles();
@@ -199,25 +206,73 @@ public class GerenciaGrid : MonoBehaviour
 
             bool hasmatch = matchedTiles.Count > 0;
             int CountGoal2 = 0;
-            int CountGoal1 = int.Parse(LevelGoal1Text.text) - matchedTiles.Count;
-            if (CountGoal1 >= 0)
-                LevelGoal1Text.text = CountGoal1.ToString();
-            if (renderer.name == "cobra-removebg-preview")
-            {
-                CountGoal2 = int.Parse(LevelGoal2Text.text) - matchedTiles.Count;
-                print(matchedTiles.Count);
-            }
+            //int CountGoal1 = int.Parse(LevelGoal1Text.text) - matchedTiles.Count;
+            //if (CountGoal1 >= 0)
+            //    LevelGoal1Text.text = CountGoal1.ToString();
+            //if (renderer.name == "cobra-removebg-preview")
+            //{
+            //    CountGoal2 = int.Parse(LevelGoal2Text.text) - matchedTiles.Count;
+            //    print("deu match" + matchedTiles.Count);
+            //    LevelGoal2Text.text = CountGoal2.ToString();
+            //}
                
-            if (CountGoal2 >= 0)
-                LevelGoal2Text.text = CountGoal2.ToString();
+            //if (CountGoal2 >= 0)
+            //    LevelGoal2Text.text = CountGoal2.ToString();
             
 
         }
 
         return matchedTiles.Count > 0;
     }
+    bool CheckandCountMatches()
+    {
+        HashSet<SpriteRenderer> matchedTiles = new HashSet<SpriteRenderer>();
+        for (int row = 0; row < GridDimension; row++)
+        {
+            for (int column = 0; column < GridDimension; column++)
+            {
+                SpriteRenderer current = GetSpriteRendererAt(column, row);
 
-        List<SpriteRenderer> FindColumnMatchForTile(int col, int row, Sprite sprite)
+                List<SpriteRenderer> horizontalMatches = FindColumnMatchForTile(column, row, current.sprite);
+                if (horizontalMatches.Count >= 2)
+                {
+                    matchedTiles.UnionWith(horizontalMatches);
+                    matchedTiles.Add(current);
+                }
+
+                List<SpriteRenderer> verticalMatches = FindRowMatchForTile(column, row, current.sprite);
+                if (verticalMatches.Count >= 2)
+                {
+                    matchedTiles.UnionWith(verticalMatches);
+                    matchedTiles.Add(current);
+                }
+            }
+        }
+
+        foreach (SpriteRenderer renderer in matchedTiles)
+        {
+            //renderer.color = Color.red;
+            
+            renderer.sprite = null;
+
+            bool hasmatch = matchedTiles.Count > 0;
+            int CountGoal2 = 0;
+           
+            if (renderer.name == "fogo-removebg-preview")
+            {
+                print(renderer.name + "em match");
+                CountMoves = matchedTiles.Count;
+            }
+
+            //if (CountGoal2 >= 0)
+            //    LevelGoal2Text.text = CountGoal2.ToString();
+
+
+        }
+
+        return matchedTiles.Count > 0;
+    }
+    List<SpriteRenderer> FindColumnMatchForTile(int col, int row, Sprite sprite)
         {
             List<SpriteRenderer> result = new List<SpriteRenderer>();
             for (int i = col + 1; i < GridDimension; i++)

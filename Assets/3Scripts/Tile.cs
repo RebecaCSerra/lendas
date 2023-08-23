@@ -40,6 +40,7 @@ public class Tile : MonoBehaviour
             {
                 //GerenciaSom.Instance.PlaySound(SoundType.TypeSelect);
                 selected = this;
+                print("dentro de tile" + selected.name);
                 Select();
             }
         }
