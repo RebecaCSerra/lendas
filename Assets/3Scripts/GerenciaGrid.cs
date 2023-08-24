@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using System;
 
 
 public class GerenciaGrid : MonoBehaviour
@@ -19,7 +20,8 @@ public class GerenciaGrid : MonoBehaviour
 
     public int StartingMoves = 10;
     private int _numMoves;
-    private int CountMoves;
+    private int CountMoves = 0;
+    private int CountMatches;
     public int NumMoves
     {
       get
@@ -98,7 +100,7 @@ public class GerenciaGrid : MonoBehaviour
                 }
 
                 SpriteRenderer renderer = newTile.GetComponent<SpriteRenderer>();
-                renderer.sprite = possibleSprites[Random.Range(0, possibleSprites.Count)];
+                renderer.sprite = possibleSprites[UnityEngine.Random.Range(0, possibleSprites.Count)];
 
                 Tile tile = newTile.AddComponent<Tile>();
                 tile.Position = new Vector2Int(column, row);
@@ -144,6 +146,7 @@ public class GerenciaGrid : MonoBehaviour
         renderer2.sprite = temp;
 
         bool changesOccurs = CheckandCountMatches();
+        
         if (!changesOccurs)
         {
             temp = renderer1.sprite;
@@ -156,11 +159,16 @@ public class GerenciaGrid : MonoBehaviour
         {
             //GerenciaSom.Instance.PlaySound(SoundType.TypePop);
             //teve mudança
-            print("Count" + CountMoves);
-            int CountGoal1 = int.Parse(LevelGoal1Text.text) -CountMoves;
-            if (CountGoal1 >= 0)
-                LevelGoal1Text.text = CountGoal1.ToString();
-           
+            print(CountMoves + "countmoves");
+            if (CountMoves>=2)
+            {
+                int CountGoal1 = int.Parse(LevelGoal1Text.text) - (CountMoves + 1);
+                if (CountGoal1 >= 0)
+                    LevelGoal1Text.text = CountGoal1.ToString();
+              
+            }
+
+            CountMoves = 0;
             NumMoves--;
             do
             {
@@ -201,7 +209,7 @@ public class GerenciaGrid : MonoBehaviour
             foreach (SpriteRenderer renderer in matchedTiles)
             {
             //renderer.color = Color.red;
-            print(renderer.name + "em match");
+            
             renderer.sprite = null;
 
             bool hasmatch = matchedTiles.Count > 0;
@@ -257,11 +265,65 @@ public class GerenciaGrid : MonoBehaviour
 
             bool hasmatch = matchedTiles.Count > 0;
             int CountGoal2 = 0;
-           
-            if (renderer.name == "fogo-removebg-preview")
+             print(renderer.name + " em match " + CountMoves + " match " + matchedTiles.Count);
+            if (String.Equals(renderer.name, "fogo-removebg-preview"))
             {
-                print(renderer.name + "em match");
-                CountMoves = matchedTiles.Count;
+               
+                CountMoves++;
+                CountMatches = matchedTiles.Count;
+                //CountMoves = matchedTiles.Count;
+            }
+
+            //if (CountGoal2 >= 0)
+            //    LevelGoal2Text.text = CountGoal2.ToString();
+
+
+        }
+
+        return matchedTiles.Count > 0;
+    }
+
+
+    bool CheckandCountMatches(string name)
+    {
+        HashSet<SpriteRenderer> matchedTiles = new HashSet<SpriteRenderer>();
+        for (int row = 0; row < GridDimension; row++)
+        {
+            for (int column = 0; column < GridDimension; column++)
+            {
+                SpriteRenderer current = GetSpriteRendererAt(column, row);
+                if (!String.Equals(current.name, name)) break;
+                    List<SpriteRenderer> horizontalMatches = FindColumnMatchForTile(column, row, current.sprite);
+                if (horizontalMatches.Count >= 2)
+                {
+                    matchedTiles.UnionWith(horizontalMatches);
+                    matchedTiles.Add(current);
+                }
+
+                List<SpriteRenderer> verticalMatches = FindRowMatchForTile(column, row, current.sprite);
+                if (verticalMatches.Count >= 2)
+                {
+                    matchedTiles.UnionWith(verticalMatches);
+                    matchedTiles.Add(current);
+                }
+            }
+        }
+
+        foreach (SpriteRenderer renderer in matchedTiles)
+        {
+            //renderer.color = Color.red;
+
+            //renderer.sprite = null;
+
+            bool hasmatch = matchedTiles.Count > 0;
+            int CountGoal2 = 0;
+
+            if (String.Equals(renderer.name, "fogo-removebg-preview"))
+            {
+                print(renderer.name + " em match " + CountMoves + " match " + matchedTiles.Count);
+                CountMoves++;
+                CountMatches = matchedTiles.Count;
+                //CountMoves = matchedTiles.Count;
             }
 
             //if (CountGoal2 >= 0)
@@ -311,7 +373,7 @@ public class GerenciaGrid : MonoBehaviour
                     SpriteRenderer current = GetSpriteRendererAt(column, row);
 
 
-                    current.sprite = Sprites[Random.Range(0, Sprites.Count)];
+                    current.sprite = Sprites[UnityEngine.Random.Range(0, Sprites.Count)];
                 }
             }
     }

@@ -788,6 +788,10 @@ PrefabInstance:
       value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 6784630853875828220, guid: 5cb2b00cb497f704aa271da67b940745, type: 3}
+      propertyPath: m_text
+      value: 18
+      objectReference: {fileID: 0}
+    - target: {fileID: 6784630853875828220, guid: 5cb2b00cb497f704aa271da67b940745, type: 3}
       propertyPath: m_fontStyle
       value: 1
       objectReference: {fileID: 0}
@@ -1418,6 +1422,7 @@ MonoBehaviour:
   LevelGoal2Text: {fileID: 1034923450}
   StartingMoves: 10
   LevelGoal1: 3
+  LevelGoal2: 5
 --- !u!4 &2029850387
 Transform:
   m_ObjectHideFlags: 0
