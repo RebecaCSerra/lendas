@@ -170,14 +170,14 @@ public class GerenciaGrid : MonoBehaviour
 
             CountMoves = 0;
             NumMoves--;
-            do
-            {
-                FillHoles();
-            } while (CheckMatches());
-             if (NumMoves <= 0)
-            {
-                   NumMoves = 0;            
-            }
+            //do
+            //{
+            //    FillHoles();
+            //} while (CheckMatches());
+            // if (NumMoves <= 0)
+            //{
+            //       NumMoves = 0;            
+            //}
             }
         }
 
