@@ -573,7 +573,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3032250562669994345, guid: 5cb2b00cb497f704aa271da67b940745, type: 3}
       propertyPath: m_text
-      value: 10
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3032250562669994345, guid: 5cb2b00cb497f704aa271da67b940745, type: 3}
       propertyPath: m_fontSize
@@ -789,7 +789,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6784630853875828220, guid: 5cb2b00cb497f704aa271da67b940745, type: 3}
       propertyPath: m_text
-      value: 18
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6784630853875828220, guid: 5cb2b00cb497f704aa271da67b940745, type: 3}
       propertyPath: m_fontStyle
@@ -821,7 +821,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7688150323971548051, guid: 5cb2b00cb497f704aa271da67b940745, type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7688150323971548051, guid: 5cb2b00cb497f704aa271da67b940745, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 279
+      objectReference: {fileID: 0}
+    - target: {fileID: 7688150323971548051, guid: 5cb2b00cb497f704aa271da67b940745, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 606
       objectReference: {fileID: 0}
     - target: {fileID: 7918333692501228952, guid: 5cb2b00cb497f704aa271da67b940745, type: 3}
       propertyPath: m_SizeDelta.x
@@ -869,17 +877,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5cb2b00cb497f704aa271da67b940745, type: 3}
---- !u!114 &1034923450 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8969886125349620552, guid: 5cb2b00cb497f704aa271da67b940745, type: 3}
-  m_PrefabInstance: {fileID: 651581805}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1093577556
 GameObject:
   m_ObjectHideFlags: 0
@@ -1419,10 +1416,9 @@ MonoBehaviour:
   Distance: 0.7
   MovesText: {fileID: 57944994}
   LevelGoal1Text: {fileID: 1577870685}
-  LevelGoal2Text: {fileID: 1034923450}
-  StartingMoves: 10
-  LevelGoal1: 3
-  LevelGoal2: 5
+  pontuacaoMax: 100
+  StartingMoves: 0
+  LevelGoal1: 300
 --- !u!4 &2029850387
 Transform:
   m_ObjectHideFlags: 0

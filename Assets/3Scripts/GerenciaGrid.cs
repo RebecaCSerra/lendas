@@ -14,7 +14,7 @@ public class GerenciaGrid : MonoBehaviour
     private GameObject[,] Grid;
     public TextMeshProUGUI MovesText;
     public TextMeshProUGUI LevelGoal1Text;
-    public TextMeshProUGUI LevelGoal2Text;
+    public int pontuacaoMax = 300;
 
 
     public int StartingMoves = 10;
@@ -33,7 +33,6 @@ public class GerenciaGrid : MonoBehaviour
         }
     }
     public int LevelGoal1 = 5;
-    public int LevelGoal2 = 5;
     private int _numTiles;
     public int NumTiles
     {
@@ -59,6 +58,8 @@ public class GerenciaGrid : MonoBehaviour
     // Start is called before the first frame update
     void Update()
     {
+        if (int.Parse(LevelGoal1Text.text) >= pontuacaoMax)
+            SceneManager.LoadScene(9);
         if (NumMoves > 0)
             MovesText.text = NumMoves.ToString();
         else
@@ -157,9 +158,9 @@ public class GerenciaGrid : MonoBehaviour
             //GerenciaSom.Instance.PlaySound(SoundType.TypePop);
             //teve mudan�a
             print("Count" + CountMoves);
-            int CountGoal1 = int.Parse(LevelGoal1Text.text) - CountMoves;
+            int CountGoal1 = int.Parse(LevelGoal1Text.text) + (CountMoves * 10);
             if (CountGoal1 >= 0)
-                LevelGoal1Text.text = CountGoal1.ToString();
+            LevelGoal1Text.text = CountGoal1.ToString();
 
             NumMoves--;
             do
@@ -205,21 +206,6 @@ public class GerenciaGrid : MonoBehaviour
             renderer.sprite = null;
 
             bool hasmatch = matchedTiles.Count > 0;
-            int CountGoal2 = 0;
-            //int CountGoal1 = int.Parse(LevelGoal1Text.text) - matchedTiles.Count;
-            //if (CountGoal1 >= 0)
-            //    LevelGoal1Text.text = CountGoal1.ToString();
-            //if (renderer.name == "cobra-removebg-preview")
-            //{
-            //    CountGoal2 = int.Parse(LevelGoal2Text.text) - matchedTiles.Count;
-            //    print("deu match" + matchedTiles.Count);
-            //    LevelGoal2Text.text = CountGoal2.ToString();
-            //}
-
-            //if (CountGoal2 >= 0)
-            //    LevelGoal2Text.text = CountGoal2.ToString();
-
-
         }
 
         return matchedTiles.Count > 0;
@@ -248,7 +234,7 @@ public class GerenciaGrid : MonoBehaviour
                 }
             }
         }
-
+        CountMoves = matchedTiles.Count;
         foreach (SpriteRenderer renderer in matchedTiles)
         {
             //renderer.color = Color.red;
@@ -256,18 +242,6 @@ public class GerenciaGrid : MonoBehaviour
             renderer.sprite = null;
 
             bool hasmatch = matchedTiles.Count > 0;
-            int CountGoal2 = 0;
-
-            if (renderer.name == "fogo-removebg-preview")
-            {
-                print(renderer.name + "em match");
-                CountMoves = matchedTiles.Count;
-            }
-
-            //if (CountGoal2 >= 0)
-            //    LevelGoal2Text.text = CountGoal2.ToString();
-
-
         }
 
         return matchedTiles.Count > 0;
