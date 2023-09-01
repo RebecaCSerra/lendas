@@ -347,7 +347,7 @@ GameObject:
   - component: {fileID: 586382233}
   - component: {fileID: 586382234}
   m_Layer: 5
-  m_Name: Button
+  m_Name: jogar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -601,7 +601,7 @@ GameObject:
   - component: {fileID: 938179289}
   - component: {fileID: 938179292}
   m_Layer: 5
-  m_Name: Button
+  m_Name: creditos
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -743,8 +743,8 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: b15508b11ada102499a11a03a2ce07e1, type: 3}
-  m_PlayOnAwake: 1
+  m_audioClip: {fileID: 8300000, guid: 35da0c6882c16b845b13e48a7c054a52, type: 3}
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
