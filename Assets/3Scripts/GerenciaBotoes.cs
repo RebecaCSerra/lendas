@@ -28,6 +28,10 @@ public class GerenciaBotoes : MonoBehaviour
     {
         SceneManager.LoadScene(10);
     }
+    public void Casita()
+    {
+        SceneManager.LoadScene(0);
+    }
     public void Fase1()
     {
         SceneManager.LoadScene(3);
