@@ -17,7 +17,16 @@ public class GerenciaBotoes : MonoBehaviour
     }
     public void Jogar()
     {
+        SceneManager.LoadScene(13);
+    }
+    public void Boitata()
+    {
         SceneManager.LoadScene(2);
+    }
+    
+    public void Iara()
+    {
+        SceneManager.LoadScene(10);
     }
     public void Fase1()
     {
@@ -92,10 +101,6 @@ public class GerenciaBotoes : MonoBehaviour
     {
         SceneManager.LoadScene(7);
     }
-    public void setaverde()
-    {
-        SceneManager.LoadScene(10);
-    }
     public void casavermelha()
     {
         SceneManager.LoadScene(0);
@@ -128,10 +133,7 @@ public class GerenciaBotoes : MonoBehaviour
     {
         SceneManager.LoadScene(11);
     }
-    public void setavermelha()
-    {
-        SceneManager.LoadScene(2);
-    }
+    
     public void loreYara()
     {
         SceneManager.LoadScene(12);

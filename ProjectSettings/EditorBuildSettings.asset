@@ -44,6 +44,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/1Scenes/faseYaraLore.unity
     guid: 21b67991da4d7ab4693d30c51414119a
+  - enabled: 1
+    path: Assets/1Scenes/etapas.unity
+    guid: 0c6a4f0047d3a5742a5f694cb0f6ca1f
   m_configObjects:
     com.unity.adaptiveperformance.loader_settings: {fileID: 11400000, guid: 52f9c485688791b4394c124a80ae8841, type: 2}
     com.unity.adaptiveperformance.samsung.android.provider_settings: {fileID: 11400000, guid: b7fbef064abc8ff488c19ddd1b788921, type: 2}
