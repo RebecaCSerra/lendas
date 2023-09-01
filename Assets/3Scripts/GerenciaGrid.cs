@@ -14,7 +14,7 @@ public class GerenciaGrid : MonoBehaviour
     private GameObject[,] Grid;
     public TextMeshProUGUI MovesText;
     public TextMeshProUGUI LevelGoal1Text;
-    public int pontuacaoMax = 300;
+    public int pontuacaoMax = 500;
 
 
     public int StartingMoves = 10;
@@ -59,11 +59,11 @@ public class GerenciaGrid : MonoBehaviour
     void Update()
     {
         if (int.Parse(LevelGoal1Text.text) >= pontuacaoMax)
-            SceneManager.LoadScene(9);
-        if (NumMoves > 0)
+          SceneManager.LoadScene(9);
+        if (NumMoves >= 0)
             MovesText.text = NumMoves.ToString();
-        else
-            SceneManager.LoadScene(8);
+        //else
+        //   SceneManager.LoadScene(8);
 
     }
     void Start()
@@ -170,7 +170,9 @@ public class GerenciaGrid : MonoBehaviour
             if (NumMoves <= 0)
             {
                 NumMoves = 0;
+                SceneManager.LoadScene(8);
             }
+            
         }
     }
 

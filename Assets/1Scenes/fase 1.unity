@@ -573,7 +573,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3032250562669994345, guid: 5cb2b00cb497f704aa271da67b940745, type: 3}
       propertyPath: m_text
-      value: 0
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 3032250562669994345, guid: 5cb2b00cb497f704aa271da67b940745, type: 3}
       propertyPath: m_fontSize
@@ -792,6 +792,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6784630853875828220, guid: 5cb2b00cb497f704aa271da67b940745, type: 3}
+      propertyPath: m_fontSize
+      value: 70
+      objectReference: {fileID: 0}
+    - target: {fileID: 6784630853875828220, guid: 5cb2b00cb497f704aa271da67b940745, type: 3}
       propertyPath: m_fontStyle
       value: 1
       objectReference: {fileID: 0}
@@ -812,6 +816,10 @@ PrefabInstance:
       value: 0.85882354
       objectReference: {fileID: 0}
     - target: {fileID: 6784630853875828220, guid: 5cb2b00cb497f704aa271da67b940745, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 70
+      objectReference: {fileID: 0}
+    - target: {fileID: 6784630853875828220, guid: 5cb2b00cb497f704aa271da67b940745, type: 3}
       propertyPath: m_fontColor32.rgba
       value: 4175026651
       objectReference: {fileID: 0}
@@ -825,11 +833,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7688150323971548051, guid: 5cb2b00cb497f704aa271da67b940745, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 279
+      value: 273.6
       objectReference: {fileID: 0}
     - target: {fileID: 7688150323971548051, guid: 5cb2b00cb497f704aa271da67b940745, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 606
+      value: 616.4
       objectReference: {fileID: 0}
     - target: {fileID: 7918333692501228952, guid: 5cb2b00cb497f704aa271da67b940745, type: 3}
       propertyPath: m_SizeDelta.x
@@ -1044,7 +1052,7 @@ PrefabInstance:
     - target: {fileID: 4410921505568994122, guid: d9e71b6425b501f40849aab79a6dd139, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: cacfbc0765bd9004182f52a9476fafa9, type: 3}
+      objectReference: {fileID: 21300000, guid: b5e8b4f7815d6224988c1a7e39bce7b1, type: 3}
     - target: {fileID: 4410921505568994122, guid: d9e71b6425b501f40849aab79a6dd139, type: 3}
       propertyPath: m_Color.a
       value: 0.8627451
@@ -1416,8 +1424,8 @@ MonoBehaviour:
   Distance: 0.7
   MovesText: {fileID: 57944994}
   LevelGoal1Text: {fileID: 1577870685}
-  pontuacaoMax: 100
-  StartingMoves: 0
+  pontuacaoMax: 400
+  StartingMoves: 10
   LevelGoal1: 300
 --- !u!4 &2029850387
 Transform:
