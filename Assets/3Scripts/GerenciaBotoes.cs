@@ -150,4 +150,8 @@ public class GerenciaBotoes : MonoBehaviour
     {
         SceneManager.LoadScene(10);
     }
+    public void configuracoesyara()
+    {
+        SceneManager.LoadScene(0);
+    }
 }
