@@ -395,20 +395,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 3032250562669994344, guid: 5cb2b00cb497f704aa271da67b940745, type: 3}
   m_PrefabInstance: {fileID: 1473039050}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1464967779
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1464967775}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4eb4d99b87b1bf94e82155c08bf2fef7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  TimeValue: 3000000
-  timeText: {fileID: 1464967783}
 --- !u!114 &1464967783
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -443,6 +429,20 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: 00:00
+--- !u!114 &1464967786
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1464967775}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4eb4d99b87b1bf94e82155c08bf2fef7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TimeValue: 90
+  timeText: {fileID: 1464967783}
 --- !u!1001 &1473039050
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -573,6 +573,10 @@ PrefabInstance:
     - target: {fileID: 1007795294659459240, guid: 5cb2b00cb497f704aa271da67b940745, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
       value: SoundManager1, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 2317985430532703039, guid: 5cb2b00cb497f704aa271da67b940745, type: 3}
+      propertyPath: m_Name
+      value: points
       objectReference: {fileID: 0}
     - target: {fileID: 3032250562669994344, guid: 5cb2b00cb497f704aa271da67b940745, type: 3}
       propertyPath: m_Name

@@ -4,8 +4,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-
-public class yaracopy : MonoBehaviour
+public class yaracopy : timer 
 {
     public List<Sprite> Sprites = new List<Sprite>();
     public GameObject TileYARAPrefab;
@@ -13,6 +12,7 @@ public class yaracopy : MonoBehaviour
     public float Distance = 1.0f;
     private GameObject[,] Grid;
     public TextMeshProUGUI yaraGoal1Text;
+    public TextMeshProUGUI points;
     public int pontuacaoMax = 500;
     private int _numTiles;
     public int NumTiles
@@ -36,9 +36,17 @@ public class yaracopy : MonoBehaviour
     }
     void Update()
     {
-        if (int.Parse(yaraGoal1Text.text) >= pontuacaoMax)
+        if (int.Parse(points.text) >= pontuacaoMax)
             SceneManager.LoadScene(18);
-    }
+       
+        {
+            if (TimeValue >= 0)
+                points.text = TimeValue.ToString();
+            //else
+            //   SceneManager.LoadScene(8);
+
+        }
+    } 
     void Start()
     {
         Grid = new GameObject[GridDimension, GridDimension];
@@ -128,9 +136,9 @@ public class yaracopy : MonoBehaviour
         else
         {
             print("Count");
-            int yaraGoal = int.Parse(yaraGoal1Text.text);
-            if (yaraGoal >= 0)
-                yaraGoal1Text.text = yaraGoal.ToString();
+            int points = int.Parse(yaraGoal1Text.text);
+            if (points >= 0)
+                yaraGoal1Text.text = points.ToString();
             do
             {
                 FillHoles2();
