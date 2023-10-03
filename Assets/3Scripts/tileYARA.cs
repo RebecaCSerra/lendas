@@ -2,9 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Tile : yaracopy
+public class tileYARA : MonoBehaviour
 {
-    private static Tile selected;
+    private static tileYARA selected;
     private SpriteRenderer Renderer;
 
     public Vector2Int Position;
@@ -24,7 +24,7 @@ public class Tile : yaracopy
         Renderer.color = Color.white;
     }
 
-    private void OnMouseDown()
+    private void OnMouseDown2()
     {
         if (selected != null)
         {
@@ -33,7 +33,7 @@ public class Tile : yaracopy
             selected.Unselect();
             if (Vector2Int.Distance(selected.Position, Position) == 1)
             {
-                GerenciaGrid.Instance.SwapTiles(Position, selected.Position);
+                yaracopy.Instance.SwapTiles2(Position, selected.Position);
                 selected = null;
             }
             else

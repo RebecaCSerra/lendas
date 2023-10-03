@@ -47,6 +47,21 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/1Scenes/etapas.unity
     guid: 0c6a4f0047d3a5742a5f694cb0f6ca1f
+  - enabled: 1
+    path: Assets/1Scenes/fase1DAYARA.unity
+    guid: 9856106e2106fad43900d76ecab5c5f5
+  - enabled: 1
+    path: Assets/1Scenes/faseyaraconfig.unity
+    guid: 904acc5a262e4a349bfb70d3d0baf5ef
+  - enabled: 1
+    path: Assets/1Scenes/faseyaraSAIR.unity
+    guid: 1d8e6747c15c04d43bb38d653f82f635
+  - enabled: 1
+    path: Assets/1Scenes/faseyaraderrota.unity
+    guid: 5b26a6edf5a0dab449dce0bde2eecc01
+  - enabled: 1
+    path: Assets/1Scenes/faseyaraVITORIA.unity
+    guid: 661b89a267f6a954e8c23373ae82f9e5
   m_configObjects:
     com.unity.adaptiveperformance.loader_settings: {fileID: 11400000, guid: 52f9c485688791b4394c124a80ae8841, type: 2}
     com.unity.adaptiveperformance.samsung.android.provider_settings: {fileID: 11400000, guid: b7fbef064abc8ff488c19ddd1b788921, type: 2}

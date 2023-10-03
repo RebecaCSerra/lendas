@@ -8,4 +8,9 @@ public class QuitGame : MonoBehaviour
     {
         Application.Quit();
     }
+
+    public void FechaYara()
+    {
+        Application.Quit();
+    }
 }

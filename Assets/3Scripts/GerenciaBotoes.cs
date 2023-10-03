@@ -109,9 +109,9 @@ public class GerenciaBotoes : MonoBehaviour
     {
         SceneManager.LoadScene(0);
     }
-    public void Yarablock1()
+    public void yaraatual()
     {
-        SceneManager.LoadScene(11);
+        SceneManager.LoadScene(14);
     }
     public void Yarablock2()
     {
@@ -152,6 +152,32 @@ public class GerenciaBotoes : MonoBehaviour
     }
     public void configuracoesyara()
     {
+        SceneManager.LoadScene(15);
+    }
+    public void InicialYara()
+    {
         SceneManager.LoadScene(0);
     }
+    public void ReiniciarYara()
+    {
+        SceneManager.LoadScene(14);
+    }
+    public void Xconfigyara()
+    {
+        SceneManager.LoadScene(14);
+    }
+    public void SAIRyara()
+    {
+        SceneManager.LoadScene(16);
+    }
+    public void naoSAIRyara()
+    {
+        SceneManager.LoadScene(15);
+    }
+    public void reiniciayara()
+    {
+        SceneManager.LoadScene(14);
+    }
+        
+    
 }

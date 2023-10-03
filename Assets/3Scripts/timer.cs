@@ -18,7 +18,7 @@ public class timer : MonoBehaviour
         else
         {
             TimeValue = 0;
-            SceneManager.LoadScene(0);
+            SceneManager.LoadScene(17);
         }
 
         DisplayTime(TimeValue);
