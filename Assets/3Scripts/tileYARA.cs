@@ -24,7 +24,7 @@ public class tileYARA : MonoBehaviour
         Renderer.color = Color.white;
     }
 
-    private void OnMouseDown2()
+    private void OnMouseDown()
     {
         if (selected != null)
         {
@@ -33,20 +33,17 @@ public class tileYARA : MonoBehaviour
             selected.Unselect();
             if (Vector2Int.Distance(selected.Position, Position) == 1)
             {
-                yaracopy.Instance.SwapTiles2(Position, selected.Position);
+                GerenciaIara.Instance.SwapTiles(Position, selected.Position);
                 selected = null;
             }
             else
             {
-                //GerenciaSom.Instance.PlaySound(SoundType.TypeSelect);
                 selected = this;
-
                 Select();
             }
         }
         else
         {
-            //GerenciaSom.Instance.PlaySound(SoundType.TypeSelect);
             selected = this;
             Select();
         }

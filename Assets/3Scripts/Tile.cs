@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Tile : yaracopy
+public class Tile : MonoBehaviour
 {
     private static Tile selected;
     private SpriteRenderer Renderer;

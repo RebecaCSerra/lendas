@@ -15,7 +15,7 @@ EditorBuildSettings:
     path: Assets/1Scenes/2fases.unity
     guid: 29cea954af9de1c46b0cca99547ff02d
   - enabled: 1
-    path: Assets/1Scenes/fase 1.unity
+    path: Assets/1Scenes/fase1boi.unity
     guid: 78033b21c4c5a464890a9670eeb85b48
   - enabled: 1
     path: Assets/1Scenes/4fasebloqueada.unity
@@ -48,7 +48,7 @@ EditorBuildSettings:
     path: Assets/1Scenes/etapas.unity
     guid: 0c6a4f0047d3a5742a5f694cb0f6ca1f
   - enabled: 1
-    path: Assets/1Scenes/fase1DAYARA.unity
+    path: Assets/1Scenes/fase1yara.unity
     guid: 9856106e2106fad43900d76ecab5c5f5
   - enabled: 1
     path: Assets/1Scenes/faseyaraconfig.unity

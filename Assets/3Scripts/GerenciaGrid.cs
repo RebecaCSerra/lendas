@@ -163,17 +163,21 @@ public class GerenciaGrid : MonoBehaviour
             if (CountGoal1 >= 0)
             LevelGoal1Text.text = CountGoal1.ToString();
 
-            NumMoves--;
-            do
+                NumMoves--;
+                do
+                {
+                    FillHoles();
+                } while (CheckMatches());
+
+            if (SceneManager.GetActiveScene() == SceneManager.GetSceneByName("fase1boi"))
             {
-                FillHoles();
-            } while (CheckMatches());
-            if (NumMoves <= 0)
-            {
-                NumMoves = 0;
-                SceneManager.LoadScene(8);
+                if (NumMoves <= 0)
+                {
+                    NumMoves = 0;
+                    SceneManager.LoadScene(8);
+                }
             }
-            
+ 
         }
     }
 
