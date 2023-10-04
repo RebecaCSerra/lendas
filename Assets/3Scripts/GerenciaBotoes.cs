@@ -178,6 +178,10 @@ public class GerenciaBotoes : MonoBehaviour
     {
         SceneManager.LoadScene(14);
     }
-        
-    
+
+    public void proximaeyara()
+    {
+        SceneManager.LoadScene(11);
+    }
+
 }

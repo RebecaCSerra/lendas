@@ -528,7 +528,7 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: a9518618ef822ae42b17dc20bcaaed7e, type: 3}
     - target: {fileID: 4426369117875696111, guid: 5cb2b00cb497f704aa271da67b940745, type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4426369117875696111, guid: 5cb2b00cb497f704aa271da67b940745, type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -612,7 +612,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7688150323971548051, guid: 5cb2b00cb497f704aa271da67b940745, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7688150323971548051, guid: 5cb2b00cb497f704aa271da67b940745, type: 3}
       propertyPath: m_SizeDelta.x
@@ -686,59 +686,6 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 3032250563677591414, guid: 5cb2b00cb497f704aa271da67b940745, type: 3}
   m_PrefabInstance: {fileID: 1022650581}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1022650583 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3032250562669994344, guid: 5cb2b00cb497f704aa271da67b940745, type: 3}
-  m_PrefabInstance: {fileID: 1022650581}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1022650584
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1022650583}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_FontData:
-    m_Font: {fileID: 12800000, guid: 6f8b74b47d87c6d49821ac194e0ff74f, type: 3}
-    m_FontSize: 69
-    m_FontStyle: 0
-    m_BestFit: 0
-    m_MinSize: 0
-    m_MaxSize: 69
-    m_Alignment: 0
-    m_AlignByGeometry: 0
-    m_RichText: 1
-    m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
-    m_LineSpacing: 1
-  m_Text: 00:00
---- !u!114 &1022650585
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1022650583}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4eb4d99b87b1bf94e82155c08bf2fef7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  TimeValue: 30000
-  timeText: {fileID: 1022650584}
 --- !u!114 &1022650586 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6784630853875828220, guid: 5cb2b00cb497f704aa271da67b940745, type: 3}
