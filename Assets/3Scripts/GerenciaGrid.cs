@@ -46,8 +46,8 @@ public class GerenciaGrid : MonoBehaviour
             _numTiles = value;
         }
     }
-    public static GerenciaGrid Instance { get; private set; }
 
+    public static GerenciaGrid Instance { get; private set; }
     void Awake()
 
     {
@@ -58,12 +58,15 @@ public class GerenciaGrid : MonoBehaviour
     // Start is called before the first frame update
     void Update()
     {
-        if (int.Parse(LevelGoal1Text.text) >= pontuacaoMax)
-          SceneManager.LoadScene(9);
-        if (NumMoves >= 0)
-            MovesText.text = NumMoves.ToString();
-        //else
-        //   SceneManager.LoadScene(8);
+        if (SceneManager.GetActiveScene() == SceneManager.GetSceneByName("fase1boi"))
+        {
+            if (int.Parse(LevelGoal1Text.text) >= pontuacaoMax)
+                SceneManager.LoadScene(9);
+            if (NumMoves >= 0)
+            {
+                MovesText.text = NumMoves.ToString();
+            }
+        }
 
     }
     void Start()

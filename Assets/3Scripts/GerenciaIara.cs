@@ -6,7 +6,6 @@ using UnityEngine.SceneManagement;
 
 public class GerenciaIara : GerenciaGrid
 {
-    public GameObject tileYARA;
     public TextMeshProUGUI yaraGoal1Text;
     public TextMeshProUGUI pointsText;
     public int newpontuacaoMax = 500;
