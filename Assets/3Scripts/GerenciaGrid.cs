@@ -63,7 +63,7 @@ public class GerenciaGrid : MonoBehaviour
             if (int.Parse(LevelGoal1Text.text) >= pontuacaoMax)
                 SceneManager.LoadScene(9);
             if (NumMoves >= 0)
-            {
+            { 
                 MovesText.text = NumMoves.ToString();
             }
         }
