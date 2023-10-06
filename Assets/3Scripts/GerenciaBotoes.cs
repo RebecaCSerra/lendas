@@ -3,6 +3,18 @@ using UnityEngine.SceneManagement;
 
 public class GerenciaBotoes : MonoBehaviour
 {
+    private bool isPaused;
+    public GameObject yaraconfig;
+    void Start()
+    {
+
+    }
+    private void Update()
+    {
+
+        
+    }
+    public GameObject config;
     public void Creditos()
     { 
         SceneManager.LoadScene(1);
@@ -74,7 +86,15 @@ public class GerenciaBotoes : MonoBehaviour
     }
     public void X()
     {
-        SceneManager.LoadScene(3);
+        config.SetActive(false);
+        if (isPaused)
+        {
+            isPaused = false;
+            Time.timeScale = 1f;
+            yaraconfig.SetActive(false);
+        }
+
+
     }
     public void back2fases()
     {
@@ -150,10 +170,6 @@ public class GerenciaBotoes : MonoBehaviour
     {
         SceneManager.LoadScene(10);
     }
-    public void configuracoesyara()
-    {
-        SceneManager.LoadScene(15);
-    }
     public void InicialYara()
     {
         SceneManager.LoadScene(0);
@@ -164,7 +180,7 @@ public class GerenciaBotoes : MonoBehaviour
     }
     public void Xconfigyara()
     {
-        SceneManager.LoadScene(14);
+        config.SetActive(false);
     }
     public void SAIRyara()
     {
@@ -183,5 +199,19 @@ public class GerenciaBotoes : MonoBehaviour
     {
         SceneManager.LoadScene(11);
     }
-
+    public void ShowMenuPanel()
+    {
+        config.SetActive(true);
+    }
+    public void ShowMenuPanelyara()
+    {
+        config.SetActive(true);
+        if (isPaused)
+        {
+            isPaused = true;
+            Time.timeScale = 0f;
+            yaraconfig.SetActive(true);
+        }
+    }
 }
+   

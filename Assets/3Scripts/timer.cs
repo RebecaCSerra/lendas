@@ -7,8 +7,12 @@ using UnityEngine.SceneManagement;
 public class timer : MonoBehaviour
 {
     public float TimeValue = 90;
-    public Text timeText; 
- 
+    public Text timeText;
+
+    void Start()
+    {
+
+    }
     void Update()
     {
         if (TimeValue > 0)
@@ -36,4 +40,5 @@ public class timer : MonoBehaviour
 
         timeText.text = string.Format("{00:00}:{01:00}", minutes, seconds);
     }
+
 }

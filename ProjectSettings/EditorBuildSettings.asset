@@ -21,7 +21,7 @@ EditorBuildSettings:
     path: Assets/1Scenes/4fasebloqueada.unity
     guid: 95e0f79c3f4844345907138bb82d9161
   - enabled: 1
-    path: "Assets/1Scenes/5configura\xE7\xF5es.unity"
+    path: Assets/1Scenes/0/DESUSO.unity
     guid: 2ca6aa3aab929974792cc9bfef8e6542
   - enabled: 1
     path: Assets/1Scenes/6sair.unity

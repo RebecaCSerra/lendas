@@ -17,7 +17,7 @@ public class Interface : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.) { } 
+       
     }
 
     void PauseScreen()
