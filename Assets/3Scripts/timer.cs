@@ -8,6 +8,7 @@ public class timer : MonoBehaviour
 {
     public float TimeValue = 90;
     public Text timeText;
+    public static bool Running = true;
 
     void Start()
     {
@@ -17,6 +18,7 @@ public class timer : MonoBehaviour
     {
         if (TimeValue > 0)
         {
+            if(Running)
             TimeValue -= Time.deltaTime;
         }
         else
@@ -40,5 +42,7 @@ public class timer : MonoBehaviour
 
         timeText.text = string.Format("{00:00}:{01:00}", minutes, seconds);
     }
+
+    
 
 }

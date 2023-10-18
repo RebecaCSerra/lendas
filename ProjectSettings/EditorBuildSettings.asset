@@ -62,6 +62,24 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/1Scenes/faseyaraVITORIA.unity
     guid: 661b89a267f6a954e8c23373ae82f9e5
+  - enabled: 1
+    path: Assets/1Scenes/Btutoriais/1inicio.unity
+    guid: a1bbd34197c3a5b4d96c9380a373ac69
+  - enabled: 1
+    path: Assets/1Scenes/Btutoriais/2comb.unity
+    guid: 8e9dd5c899a94834baf4d1f356d39fb6
+  - enabled: 1
+    path: Assets/1Scenes/Btutoriais/3moves.unity
+    guid: 91683ff1f41de4c409da336cd631f43b
+  - enabled: 1
+    path: Assets/1Scenes/Btutoriais/4points.unity
+    guid: a6d0f63badbd31d479b963857495abed
+  - enabled: 1
+    path: Assets/1Scenes/Btutoriais/5jogue.unity
+    guid: 3c0d2a1291c20db49a60877f3a7fb0c7
+  - enabled: 1
+    path: Assets/1Scenes/Ytutoriais/1inicioy.unity
+    guid: 44986acbc8b58564186f7c6badcf9b58
   m_configObjects:
     com.unity.adaptiveperformance.loader_settings: {fileID: 11400000, guid: 52f9c485688791b4394c124a80ae8841, type: 2}
     com.unity.adaptiveperformance.samsung.android.provider_settings: {fileID: 11400000, guid: b7fbef064abc8ff488c19ddd1b788921, type: 2}

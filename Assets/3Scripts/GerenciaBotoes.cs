@@ -46,7 +46,7 @@ public class GerenciaBotoes : MonoBehaviour
     }
     public void Fase1()
     {
-        SceneManager.LoadScene(3);
+        SceneManager.LoadScene(19);
     }
     public void Fasebloqueada()
     {
@@ -87,14 +87,6 @@ public class GerenciaBotoes : MonoBehaviour
     public void X()
     {
         config.SetActive(false);
-        if (isPaused)
-        {
-            isPaused = false;
-            Time.timeScale = 1f;
-            yaraconfig.SetActive(false);
-        }
-
-
     }
     public void back2fases()
     {
@@ -131,7 +123,7 @@ public class GerenciaBotoes : MonoBehaviour
     }
     public void yaraatual()
     {
-        SceneManager.LoadScene(14);
+        SceneManager.LoadScene(24);
     }
     public void Yarablock2()
     {
@@ -181,6 +173,7 @@ public class GerenciaBotoes : MonoBehaviour
     public void Xconfigyara()
     {
         config.SetActive(false);
+        timer.Running = true;
     }
     public void SAIRyara()
     {
@@ -206,12 +199,7 @@ public class GerenciaBotoes : MonoBehaviour
     public void ShowMenuPanelyara()
     {
         config.SetActive(true);
-        if (isPaused)
-        {
-            isPaused = true;
-            Time.timeScale = 0f;
-            yaraconfig.SetActive(true);
-        }
+        timer.Running = false;
     }
 }
    
