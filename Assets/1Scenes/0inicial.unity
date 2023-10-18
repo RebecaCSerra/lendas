@@ -491,6 +491,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f6ce3263f080e84a9284de1f5bfe08d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  yaraconfig: {fileID: 0}
+  config: {fileID: 0}
 --- !u!82 &586382234
 AudioSource:
   m_ObjectHideFlags: 0
@@ -945,6 +947,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f6ce3263f080e84a9284de1f5bfe08d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  yaraconfig: {fileID: 0}
+  config: {fileID: 0}
 --- !u!1 &1945672410
 GameObject:
   m_ObjectHideFlags: 0

@@ -23,7 +23,16 @@ public class tutorialboimusic : MonoBehaviour
     {
         if (SceneManager.GetActiveScene().name == "fase1boi")
         {
-            Destroy(this.gameObject);
+            GetComponent<AudioSource>().Pause();
+
+        }
+        if (SceneManager.GetActiveScene().name == "1inicioy")
+        {
+            GetComponent<AudioSource>().Stop();
+        }
+        if (SceneManager.GetActiveScene().name == "fase1yara")
+        {
+            GetComponent<AudioSource>().Stop();
         }
     }
 }

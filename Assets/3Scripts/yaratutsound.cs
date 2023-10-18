@@ -21,10 +21,11 @@ public class yaratutsound : MonoBehaviour
 
     void Update()
     {
-
-        if (SceneManager.GetActiveScene().name == "fase1boi")
+        if (SceneManager.GetActiveScene().name == "0inicial")
         {
-            Destroy(this.gameObject);
+            GetComponent<AudioSource>().Pause();
+
         }
+
     }
 }
